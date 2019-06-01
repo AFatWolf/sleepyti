@@ -1,0 +1,33 @@
+doctype html
+
+head
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+    script(type="text/javascript" src="index.js")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+    link(rel="stylesheet" href="css/style.css")
+body
+    .start      
+        header(style="text-align: center;")
+            h1 sleepyti
+        p I have to wake up at...
+        mixin generate-combobox(type, start, end, jump)
+            select(name=type)
+                option(value=type) (#{type})
+                - for(let i = start; i < end; i += jump)
+                    option(value=i) #{i}
+        form(id="sleep" action="/sleeptime" method="post")
+            div(style="text-align: center;")
+                .row.justify-content-center
+                    +generate-combobox("hour", 1, 13, 1)
+                    strong(style="padding-left: 8px; padding-right: 5px; font-size: 110%;") :
+                    +generate-combobox("minute", 0, 60, 5)
+                    select(name="ampm")
+                        option(value='am') AM
+                        option(value='pm') PM
+                button(id="calculate") Caculate
+        div(style="text-align: center;")
+            p #[i or]
+        p Find out when to wake up if you go to bed now
+        form(action="/sleeptime-now" method="post")
+            div(style="text-align: center;")
+                button(id="zzz") zzz

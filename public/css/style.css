@@ -1,0 +1,62 @@
+.start {
+    margin-left: 10%;
+}
+
+body {
+    margin-top: 30px;
+    background-color: #001f3f;
+}
+
+select {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+*:not(.time) {
+    background-color: #001f3f;
+    color: rgb(130,255,215); 
+}
+
+.time {
+    font-size: 200%;
+    color: rgb(73, 251, 53);
+}
+
+p {
+    font-size: 125%;
+}
+
+select option{
+    background-color: #001f3f;
+    color: rgb(130,255,215); 
+}
+
+select {
+    background-color: #001f3f;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 110%;
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    width: auto;
+
+    font-size: 125%;
+}
+
